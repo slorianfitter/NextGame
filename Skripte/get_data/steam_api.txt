@@ -1,0 +1,1 @@
+https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?key="yourkey"&include_appinfo=1&include_played_free_games=1&format=json
