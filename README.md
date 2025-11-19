@@ -13,7 +13,7 @@
 3. [Aktueller Stand 10.10.2025](#-aktueller-stand-10102025)
 4. [Update 16.10.2025](#-update-16102025)
 5. [Update 04.11.2025](#-update-04112025)
-6. [Update 19.11.2025](#-update-04112025)
+6. [Update 19.11.2025](#-update-19112025)
 
 ---
 
