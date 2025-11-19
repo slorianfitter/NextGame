@@ -13,6 +13,7 @@
 3. [Aktueller Stand 10.10.2025](#-aktueller-stand-10102025)
 4. [Update 16.10.2025](#-update-16102025)
 5. [Update 04.11.2025](#-update-04112025)
+6. [Update 19.11.2025](#-update-19112025)
 
 ---
 
@@ -219,7 +220,55 @@ Dadurch musste ich die vorherige Beschaffung abbrechen und **von vorne beginnen*
 - Das **Distanzmodell** schreiben und erste Tests durchführen  
 - Eventuell das **Distanzmodell direkt im Streamlit-Interface** implementieren  
 - Parallel weiterhin Daten beschaffen (**Tags**, **Reviews**, **Preise**)  
-- **Design-Feinschliff** im Streamlit-Frontend  
+- **Design-Feinschliff** im Streamlit-Frontend 
+
+---
+
+## 📆 Update 19.11.2025
+
+Das Projekt ist so gut wie abgeschlossen.  
+Alle bislang notwendigen Daten sind bereits seit einer Woche vollständig erhoben und bearbeitet. Es benötigt nur noch einen Feinschliff der Labels und Korrektur kleinerer Tippfehler.
+
+### 🔹 Modell 1
+Modell 1 steht seit Wochen und funktioniert wie geplant.  
+
+### 🔹 Modell 2
+Modell 2 wurde vorgestern fertiggestellt und hat einige Schwierigkeiten verursacht.  
+Der Grundansatz war ein einfaches Distanzmaß zwischen Spielen. Ein sehr naiver Ansatz, der theoretisch funktioniert, hier aber aufgrund der Binärdaten nicht optimal war.  
+
+Das Distanzmodell berücksichtigt nicht nur die euklidische Distanz zwischen den Spielemerkmalen, sondern filtert vorher auch den Winkel der Vektoren. Dadurch können ähnliche Spiele zum aktuellen Nutzerprofil identifiziert werden.  
+
+Zusätzlich habe ich es dem Nutzer ermöglicht, sein Profil einzusehen und bei Bedarf zu bearbeiten. Die genauen Instruktionen für das Profil müssen allerdings noch in das Interface implementiert werden.  
+
+Insgesamt liefert das Modell jedoch solide Ergebnisse, und ich bin vorerst zufrieden.
+
+### 🔹 Modell 3
+Modell 3 befindet sich noch in der Entwicklung. Ziel ist, die **Reviews** zusätzlich zu berücksichtigen. Dabei habe ich bisher einige Herausforderungen festgestellt:
+
+- 75 % aller Spiele haben weniger als 130 Reviews. Das bedeutet nicht, dass sie schlechte Spiele sind.  
+- Klassische Ansätze wie:
+  - positive Reviews / Gesamtanzahl der Reviews → starke Verzerrung bei Spielen mit wenigen Reviews  
+  - positive Reviews − negative Reviews → ermöglicht, dass kleine Spiele negativ dominieren
+    
+  führen zu Problemen.
+
+**Lösungsansätze**, die ich nun testen möchte:
+
+- Wilson Lower Bound  
+- Bayesian Weighted Rating  
+- Wald-Intervall  
+- Agresti-Coull-Intervall  
+
+Ziel ist es, die Methode zu finden, die am sinnvollsten Ergebnisse liefert.  
+Außerdem wird weiterhin nach anderen Methoden Ausschau gehalten.
+
+
+### 🛫 Nächste Schritte
+- Implementierung der Grundzüge von Model 3  
+- Testen verschiedener Methoden zur Berechnung von Bewertungen basierend auf Reviews  
+- Feinschliff im Interface, insbesondere für die Profilbearbeitung
+
+ 
 - Mit den **Grundzügen des dritten Modells** beginnen
 
 
