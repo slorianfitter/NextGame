@@ -274,7 +274,7 @@ Außerdem wird weiterhin nach anderen Methoden Ausschau gehalten.
 
 ---
 
-# 📆 Update – 20.11.2025
+## 📆 Update 20.11.2025
 
 Die Modelle stehen.  
 Ich habe mich für das **Agresti–Coull-Konfidenzintervall** entschieden.  
@@ -287,7 +287,6 @@ Dadurch fehlen mir einige Informationen, und beim Main-Skript bin ich damit wied
 Inzwischen habe ich jedoch viel aufgeholt und bin wieder auf Kurs.  
 Mit Ausnahme der Reviewdaten ist alles wieder in einem normalen Zustand.
 
----
 
 ## 🛫 Nächste Schritte
 
