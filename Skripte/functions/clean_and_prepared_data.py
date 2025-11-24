@@ -4,8 +4,8 @@ import pandas as pd
 
 def clean_and_prepare_data(df:pd.DataFrame, total_games):
 
-    df = df[["appid","playtime_forever","playtime_2weeks","rtime_last_played"]]
-    df = df.rename(columns={"appid": "id"})
+    df = df[["id","playtime_forever","playtime_2weeks","rtime_last_played"]]
+
     merged_data = pd.merge(df, total_games, how="left", on="id")
     
     data_temporary = merged_data.dropna(subset=["required_age"]).copy()
