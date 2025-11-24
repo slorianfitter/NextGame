@@ -10,11 +10,11 @@ import plotly.io as pio
 
 # Import der notwendigen Daten
 
-game_data = pd.read_csv("https://raw.githubusercontent.com/slorianfitter/NextGame/refs/heads/main/data/data/full_data_v1.csv")
+game_data = pd.read_csv("https://raw.githubusercontent.com/slorianfitter/NextGame/refs/heads/main/data/full_data_v1.csv")
 
 
-game_data_0_1_part1 = pd.read_csv("https://raw.githubusercontent.com/slorianfitter/NextGame/refs/heads/main/data/datafull_data_0_1_part1.csv")
-game_data_0_1_part2 = pd.read_csv("https://raw.githubusercontent.com/slorianfitter/NextGame/refs/heads/main/data//datafull_data_0_1_part2.csv")
+game_data_0_1_part1 = pd.read_csv("https://raw.githubusercontent.com/slorianfitter/NextGame/refs/heads/main/data/full_data_0_1_part1.csv")
+game_data_0_1_part2 = pd.read_csv("https://raw.githubusercontent.com/slorianfitter/NextGame/refs/heads/main/data/datafull_data_0_1_part2.csv")
 game_data_0_1 = pd.merge(game_data_0_1_part1,game_data_0_1_part2,how="outer")
 game_data_0_1 = game_data_0_1.sort_values(by="id")
 image_and_description_data = pd.read_csv("https://raw.githubusercontent.com/slorianfitter/NextGame/refs/heads/main/data/image_and_description_data.csv")
