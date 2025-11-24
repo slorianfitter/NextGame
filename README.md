@@ -15,6 +15,7 @@
 5. [Update 04.11.2025](#-update-04112025)
 6. [Update 19.11.2025](#-update-19112025)
 7. [Update 20.11.2025](#-update-20112025)
+7. [Update 24.11.2025](#-update-24112025)
 
 ---
 
@@ -292,6 +293,15 @@ Mit Ausnahme der Reviewdaten ist alles wieder in einem normalen Zustand.
 
 - weiter coden  
 - Krone richten, Zacken austauschen und aus dem Fehler lernen. 
+
+---
+
+## 📆 Update 24.11.2025
+
+Das Projekt steht nun auf eigenen Füßen. Das Interface steht und es funktioniert erstmal so, wie ich es mir vorstelle. 
+Natürlich gibt es noch Anpassungen und verbesserungsmöglichkeiten. Dazu aber später mehr im Projektoverview.
+
+Nun werde ich das Projekt nach Github klonen und mit Streamlitcloud verbinden, damit das Projekt jederzeit abrufbar ist und getestet werden kann.
 
 
 
