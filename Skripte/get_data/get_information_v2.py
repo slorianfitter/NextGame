@@ -5,7 +5,7 @@ import time
 import os
 
 # CSV mit allen App-IDs laden
-base_steam = pd.read_csv("data/spiele_ids_steam.csv")
+base_steam = pd.read_csv("D:/Projekte/spielvorschlag/data/spiele_ids_steam.csv")
 
 
 required_info = []  # -> Base für alle notwendigen Infos, die ich aktuell brauche 
@@ -15,16 +15,16 @@ exceptions = []  # Daten auffangen weil Daten in Steamapi teilweise fehlen. -> W
 
 
 # Original data
-file_path_required_info = "data/required_info.csv"
-file_path_additional_info = "data/additional_info.csv"
-file_path_exception_data = "data/exception_data.csv"
-file_path_current_index = "data/current_index.csv"
+file_path_required_info = "D:/Projekte/spielvorschlag/data/required_info.csv"
+file_path_additional_info = "D:/Projekte/spielvorschlag/data/additional_info.csv"
+file_path_exception_data = "D:/Projekte/spielvorschlag/data/exception_data.csv"
+file_path_current_index = "D:/Projekte/spielvorschlag/data/current_index.csv"
 
 # Advanced Data, for data completion 
-file_path_second_index = "data/second_index.csv"
-file_path_second_required_info = "data/second_required_info.csv"
-file_path_second_additional_info = "data/second_additional_info.csv"
-file_path_second_exception_data = "data/second_exception_data.csv"
+file_path_second_index = "D:/Projekte/spielvorschlag/data/second_index.csv"
+file_path_second_required_info = "D:/Projekte/spielvorschlag/data/second_required_info.csv"
+file_path_second_additional_info = "D:/Projekte/spielvorschlag/data/second_additional_info.csv"
+file_path_second_exception_data = "D:/Projekte/spielvorschlag/data/second_exception_data.csv"
 
 #-------------------------------------------
 # Modifikator für first and second pass!!!!
