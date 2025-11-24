@@ -9,7 +9,14 @@ import streamlit as st
 import plotly.express as px
 import plotly.io as pio
 
+st.write("Working dir:", os.getcwd())
+st.write("Files in root:", os.listdir())
+st.write("Files in data:", os.listdir("data") if os.path.exists("data") else "data folder not found")
+st.write("Files in functions:", os.listdir("functions") if os.path.exists("functions") else "functions folder not found")
+
 # Import der notwendigen Daten
+
+
 
 # Basisverzeichnis: Ordner, in dem das Skript liegt
 BASE_DIR = os.path.dirname(__file__)
