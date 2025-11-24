@@ -7,11 +7,11 @@ import os
 
 
 
-file_path_review_alltime = "../../data/review_alltime.csv"
-file_path_loading_problems = "../../data/loading_problems_all_time_reviews.csv"
+file_path_review_alltime = "data/review_alltime.csv"
+file_path_loading_problems = "data/loading_problems_all_time_reviews.csv"
 count = 0 
 
-data = pd.read_csv("../../data/wanted_information.csv")
+data = pd.read_csv("data/wanted_information.csv")
 data = data.sort_values(by="id", ascending= True)
 
 ids = data["id"]
