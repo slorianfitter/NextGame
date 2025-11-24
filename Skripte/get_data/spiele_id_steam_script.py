@@ -11,6 +11,6 @@ spiele = res["applist"]["apps"]
 df = pd.DataFrame(spiele)
 
 # Excel-Datei schreiben
-df.to_csv("D:/Projekte/spielvorschlag/spiele_ids_steam_2.csv", index=False)
+df.to_csv("data/spiele_ids_steam_2.csv", index=False)
 
 print("Datei wurde geschrieben")

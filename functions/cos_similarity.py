@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-def cos_similarity(skalar_df: pd.DataFrame, skalar_profile: pd.DataFrame):
+def cos_similarity(skalar_profile: pd.DataFrame, skalar_df: pd.DataFrame):
     """
     Berechnet die Cosinus-Ähnlichkeit zwischen jeder Zeile des DataFrames
     und dem Profil.

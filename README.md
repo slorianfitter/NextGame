@@ -14,6 +14,8 @@
 4. [Update 16.10.2025](#-update-16102025)
 5. [Update 04.11.2025](#-update-04112025)
 6. [Update 19.11.2025](#-update-19112025)
+7. [Update 20.11.2025](#-update-20112025)
+7. [Update 24.11.2025](#-update-24112025)
 
 ---
 
@@ -270,6 +272,37 @@ Außerdem wird weiterhin nach anderen Methoden Ausschau gehalten.
 
  
 - Mit den **Grundzügen des dritten Modells** beginnen
+
+---
+
+## 📆 Update 20.11.2025
+
+Die Modelle stehen.  
+Ich habe mich für das **Agresti–Coull-Konfidenzintervall** entschieden.  
+**Bayesian** und **Wilson** wären ebenfalls geeignete Alternativen.  
+Das **Wald-Intervall** ist hingegen für Spiele mit wenigen Reviews ungeeignet und liefert zu ungenaue Ergebnisse.
+
+Gestern ist mir außerdem aufgefallen, dass ich durch einen Fehler meine lokalen Daten mit dem Stand aus dem Repo vom **04.11.** überschrieben habe.  
+Dadurch fehlen mir einige Informationen, und beim Main-Skript bin ich damit wieder auf dem Stand von vor zwei Wochen.
+
+Inzwischen habe ich jedoch viel aufgeholt und bin wieder auf Kurs.  
+Mit Ausnahme der Reviewdaten ist alles wieder in einem normalen Zustand.
+
+
+## 🛫 Nächste Schritte
+
+- weiter coden  
+- Krone richten, Zacken austauschen und aus dem Fehler lernen. 
+
+---
+
+## 📆 Update 24.11.2025
+
+Das Projekt steht nun auf eigenen Füßen. Das Interface steht und es funktioniert erstmal so, wie ich es mir vorstelle. 
+Natürlich gibt es noch Anpassungen und verbesserungsmöglichkeiten. Dazu aber später mehr im Projektoverview.
+
+Nun werde ich das Projekt nach Github klonen und mit Streamlitcloud verbinden, damit das Projekt jederzeit abrufbar ist und getestet werden kann.
+
 
 
 
