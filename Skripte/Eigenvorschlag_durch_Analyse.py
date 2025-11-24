@@ -10,7 +10,7 @@ import plotly.io as pio
 
 # Import der notwendigen Daten
 
-game_data = pd.read_csv("data/full_data_v1.csv")
+game_data = pd.read_csv("data/full_data_v1.csv", low_memory = False)
 
 
 game_data_0_1_part1 = pd.read_csv("data/full_data_0_1_part1.csv", sep=";")
