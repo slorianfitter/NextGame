@@ -13,7 +13,7 @@ import plotly.io as pio
 
 # Basisverzeichnis: Ordner, in dem das Skript liegt
 BASE_DIR = os.path.dirname(__file__)
-DATA_DIR = os.path.join(BASE_DIR, "../data")  # "../" weil Skript in 'Skripte/' liegt
+DATA_DIR = os.path.join(BASE_DIR, "data")  # "../" weil Skript in 'Skripte/' liegt
 
 # CSV-Dateien laden
 game_data_0_1_part1 = pd.read_csv(
@@ -500,6 +500,7 @@ if uploaded_file is not None:
         st.caption(game["short_description"])
 
 # Import der notwendigen Daten
+
 
 
 
