@@ -3,7 +3,7 @@ import pandas as pd
 def profile(df: pd.DataFrame, weighted=False, last_14_days=False):
     
     df = df.select_dtypes(include=["number"])
-    df = df.drop(labels=["id"], axis=1, errors="ignore")  # robust
+    df = df.drop(labels=["id"], axis=1, errors="ignore")  
 
     df = df.fillna(0)
     
