@@ -13,9 +13,9 @@ import plotly.io as pio
 game_data = pd.read_csv("data/full_data_v1.csv")
 
 
-game_data_0_1_part1 = pd.read_csv("data/full_data_0_1_part1.csv")
-game_data_0_1_part2 = pd.read_csv("data/full_data_0_1_part2.csv")
-game_data_0_1 = pd.concat([game_data_0_1_part1,game_data_0_1_part2])
+game_data_0_1_part1 = pd.read_csv("data/full_data_0_1_part1.csv", sep=";")
+game_data_0_1_part2 = pd.read_csv("data/full_data_0_1_part2.csv",sep=";")
+game_data_0_1 = pd.merge(game_data_0_1_part1,game_data_0_1_part2,how="outer")
 game_data_0_1 = game_data_0_1.sort_values(by="id")
 image_and_description_data = pd.read_csv("data/image_and_description_data.csv")
 
