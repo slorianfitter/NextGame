@@ -8,43 +8,54 @@
 # import der pakete
 import pandas as pd
 import random
-from .clean_and_prepared_data import clean_and_prepare_data
 
 
 
-def base_recommend(user_games):
-    url = "https://drive.google.com/file/d/1bqf0ik0TgFTKW2dKo-DznRsGRtwij1yD/view?usp=sharing"
-    path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
-        
-    total_games = pd.read_csv(path)
-    user_games = pd.DataFrame(user_games)
+def base_recommend(user_games, all_games):
 
-    # 2. Daten vorbereiten (angenommen deine Funktion existiert)
-    games = clean_and_prepare_data(user_games, total_games)
+    # Top Genre
+    genre = user_games["genre"].str.split(";")
+    genre_explode = genre.explode()
+    top_genre = genre_explode.value_counts().idxmax()
 
-    # 3. Genre-Analyse für User-Daten
-    genre_explode = games["genre"].explode()
+    # Top Category
+    categories = user_games["categories"].str.split(";")
+    categories_explode = categories.explode()
+    top_category = categories_explode.value_counts().idxmax()
 
-    genre_count = genre_explode.value_counts().reset_index()
-    genre_count.columns = ["genre", "count"]
+    # Top Tag
+    tags = user_games["tags"].str.split(";")
+    tags_explode = tags.explode()
+    top_tag = tags_explode.value_counts().idxmax()
 
-    # 4️. Meistgespieltes Genre holen
-    top_genre = genre_count["genre"][0]
+    # Alle Spalten vorbereiten
+    for col in ["genre", "categories", "tags"]:
+        all_games[col] = (
+            all_games[col]
+            .fillna("")
+            .astype(str)
+            .str.rstrip(";")
+            .str.split(";")
+        )
 
-    # 5. Genre-Liste vorbereiten (NaN entfernen und splitten)
-    total_games["genre"] = (
-        total_games["genre"]
-        .fillna("")               # Falls NaN-Werte existieren
-        .astype(str)              # Sicherstellen, dass alles String ist
-        .str.rstrip(";")
-        .str.split(";")
-    )
+    # Filter anwenden
+    data_filtered = all_games[
+        all_games["genre"].apply(lambda x: top_genre in x) &
+        all_games["categories"].apply(lambda x: top_category in x) &
+        all_games["tags"].apply(lambda x: top_tag in x)
+    ]
 
+    # Empfehlung ziehen
+    try:
+        recommendation = data_filtered.sample(min(3, len(data_filtered)))
+        result = recommendation[["id","name","price","released","genre","categories","tags","required_age","feature"]]
+        # Falls Spalte price_in_cents_no_discount existiert, sonst price verwenden
+        if "price_in_cents_no_discount" in result.columns:
+            result = result.sort_values(by="price_in_cents_no_discount", ascending=True)
+        else:
+            result = result.sort_values(by="price", ascending=True)
+    except ValueError:
+        result = "Zu viele Filter aktiv. Versuche weniger oder andere Kombinationen"
+    
+    return result
 
-    data_filtered = total_games[total_games["genre"].apply(lambda x: top_genre in x)]
-
-    recommendation = data_filtered.sample(10)
-
-    recommendation = recommendation[["name", "released", "price_in_cents_no_discount",	"genre", "categories", "required_age","feature"]]
-
-    return recommendation.sort_values(by="price_in_cents_no_discount", ascending=True)
