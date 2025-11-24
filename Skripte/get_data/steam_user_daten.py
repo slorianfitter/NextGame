@@ -12,6 +12,6 @@ df = pd.DataFrame(games)
 df["hours_played"] = (df["playtime_forever"] / 60).round(2)
 
 # Excel-Datei schreiben
-df.to_csv("D:/Projekte/spielvorschlag/data/eigene_steam_daten.csv", index=False)
+df.to_csv("../../data/eigene_steam_daten.csv", index=False)
 
 print("CSV-Datei erstellt: eigene_steam_daten.csv")

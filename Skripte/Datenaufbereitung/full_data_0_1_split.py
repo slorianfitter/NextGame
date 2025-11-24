@@ -1,6 +1,6 @@
 import pandas as pd
 
-full_data_0_1 = pd.read_csv("D:/Projekte/spielvorschlag/data/full_data_v0.1.2.csv")
+full_data_0_1 = pd.read_csv("../data/full_data_v0.1.2.csv")
 
 if len(full_data_0_1) <= 100000:
     n = 50000
@@ -19,6 +19,6 @@ full_data_0_1_part2 = full_data_0_1.iloc[n:]
 # Speichern der Daten
 
 
-full_data_0_1_part1.to_csv("D:/Projekte/spielvorschlag/data/full_data_0_1_part1.csv", index=False)
-full_data_0_1_part2.to_csv("D:/Projekte/spielvorschlag/data/full_data_0_1_part2.csv", index=False)
+full_data_0_1_part1.to_csv("../data/full_data_0_1_part1.csv", index=False)
+full_data_0_1_part2.to_csv("../data/full_data_0_1_part2.csv", index=False)
 print("Teilung abgeschlossen!!!")
