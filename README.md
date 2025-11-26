@@ -16,7 +16,7 @@
 6. [Update 19.11.2025](#-update-19112025)
 7. [Update 20.11.2025](#-update-20112025)
 7. [Update 24.11.2025](#-update-24112025)
-
+8. [Update 26.11.2025](#-update-26112025)
 ---
 
 ## Warum das Projekt?
@@ -303,6 +303,16 @@ Natürlich gibt es noch Anpassungen und verbesserungsmöglichkeiten. Dazu aber s
 
 Nun werde ich das Projekt nach Github klonen und mit Streamlitcloud verbinden, damit das Projekt jederzeit abrufbar ist und getestet werden kann.
 
+---
+
+## 📆 Update 26.11.2025
+
+Vorgestern habe ich das Repository geklont und anschließend versucht, es mit Streamlit Cloud zu verbinden. Grundsätzlich klappt die Verbindung, die App wird auch angezeigt, aber sie läuft nicht.
+
+Vermutlich liegt das Problem an der Größe der App. Zunächst hatte ich angenommen, dass die Abhängigkeiten nicht korrekt sind, aber in diesem Fall würde ich eine entsprechende Fehlermeldung bekommen – die trat jedoch nicht auf.
+
+Also muss ich mir zunächst eine alternative Lösung überlegen.
+Lokal (Localhost) funktioniert die App dagegen einwandfrei.
 
 
 
