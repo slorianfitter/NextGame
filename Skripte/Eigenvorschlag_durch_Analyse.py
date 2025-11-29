@@ -10,14 +10,14 @@ import plotly.io as pio
 
 # Import der notwendigen Daten
 
-game_data = pd.read_csv("D:/Projekte/spielvorschlag/data/full_data_v1.csv")
+game_data = pd.read_csv("data/full_data_v1.csv")
 
 
-game_data_0_1_part1 = pd.read_csv("D:/Projekte/spielvorschlag/data/full_data_0_1_part1.csv")
-game_data_0_1_part2 = pd.read_csv("D:/Projekte/spielvorschlag/data/full_data_0_1_part2.csv")
+game_data_0_1_part1 = pd.read_csv("data/full_data_0_1_part1.csv", sep=";")
+game_data_0_1_part2 = pd.read_csv("data/full_data_0_1_part2.csv", sep=";")
 game_data_0_1 = pd.merge(game_data_0_1_part1,game_data_0_1_part2,how="outer")
 game_data_0_1 = game_data_0_1.sort_values(by="id")
-image_and_description_data = pd.read_csv("D:/Projekte/spielvorschlag/data/image_and_description_data.csv")
+image_and_description_data = pd.read_csv("data/image_and_description_data.csv")
 
 
 st.header("App für eine Spielempfehlung auf Basis deines Profils")
@@ -170,7 +170,7 @@ if uploaded_file is not None:
         top_game = data_filtered.iloc[0]
         st.metric(
             label=f"Your #1 game - {top_game['playtime_forever']} Std.",
-            value=f"{top_game["name"]}"
+            value=f"{top_game['name']}"
         )
             
         #get image
