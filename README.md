@@ -17,6 +17,7 @@
 7. [Update 20.11.2025](#-update-20112025)
 7. [Update 24.11.2025](#-update-24112025)
 8. [Update 26.11.2025](#-update-26112025)
+9. [Update 28.11.2025](#-update-28112025)
 ---
 
 ## Warum das Projekt?
@@ -289,7 +290,7 @@ Inzwischen habe ich jedoch viel aufgeholt und bin wieder auf Kurs.
 Mit Ausnahme der Reviewdaten ist alles wieder in einem normalen Zustand.
 
 
-## 🛫 Nächste Schritte
+### 🛫 Nächste Schritte
 
 - weiter coden  
 - Krone richten, Zacken austauschen und aus dem Fehler lernen. 
@@ -314,5 +315,31 @@ Vermutlich liegt das Problem an der Größe der App. Zunächst hatte ich angenom
 Also muss ich mir zunächst eine alternative Lösung überlegen.
 Lokal (Localhost) funktioniert die App dagegen einwandfrei.
 
+
+## 📆 Update 28.11.2025
+
+Das Projekt ist nun **vorzeigbar**.  
+
+### Aktueller Stand
+
+- Die App läuft jetzt über **Hugging Face** (https://huggingface.co/spaces/slorianfitter/newgame), auch wenn der Upload von Dateien blockiert ist. 
+ 
+- Lokal funktioniert die App weiterhin problemlos, und über Hugging Face ist zumindest eine funktionierende Version mit den lokalen Daten verfügbar.  
+- Es gibt insgesamt **fünf relevante CSV-Dateien**, von denen eine selbst beschafft werden muss, die restlichen können direkt genutzt werden.  
+- Damit kann das Dashboard und die Modelle lokal verwendet werden.  
+
+### Wichtige Hinweise
+
+- Der Punkt, an dem der Nutzer den eigenen **Steam-API-Key** eingeben muss, wird noch angepasst.  
+- Durch unvollständige Steam-Daten fehlen manche Spiele in der Analyse. Ein Beispiel: **NBA 2K21** ist im Shop sichtbar, aber nicht in den Steam-IDs enthalten. Solche Fälle können aktuell nicht berücksichtigt werden.  
+- Weiterhin werden alle Spiele herausgefiltert, die keine Altersbeschränkung haben – auch Spiele aus der eigenen Bibliothek. 
+- Geplant ist, **Kontakt mit Steam** aufzunehmen, um zu klären, warum einige Daten fehlen.  
+
+### 🛫 Nächste Schritte
+
+- Projektübersicht erstellen und alle bisherigen Fortschritte dokumentieren.  
+- Machine Learning testen – auch wenn die ursprüngliche Idee vorerst verworfen wurde, möchte ich es dennoch ausprobieren.  
+- Datenaktualisierung und Profilintegration verbessern, sodass auch Spiele außerhalb der aktuellen Steam-IDs berücksichtigt werden können.  
+- Nach alternativen Lösungen suchen, um die App für den Nutzer einfacher und komfortabler zu machen.
 
 
