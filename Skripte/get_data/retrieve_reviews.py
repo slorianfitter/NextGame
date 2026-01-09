@@ -81,8 +81,8 @@ for id in ids[start_index:]:
         reviews_30_days_search = re.search(r"(\d+)\s*\D*(\d[\d.,]*)", reviews_30_days) 
     
         if reviews_30_days_search:
-            reviews_30_days_total = int(reviews_30_days_search.group(1))
-            reviews_30_days_percentage = int(reviews_30_days_search.group(2).replace(".", "").replace(",", ""))  
+            reviews_30_days_total = int(reviews_30_days_search.group(2))
+            reviews_30_days_percentage = int(reviews_30_days_search.group(1).replace(".", "").replace(",", ""))  
         else:
             reviews_30_days_total = int(0)
             reviews_30_days_percentage = int(0) 
