@@ -5,18 +5,18 @@ import pandas as pd
 
 def load_all_data():
     game_data = pd.read_csv(
-        "D:/Projekte/spielvorschlag/data/full_data_v1.csv"
+        "./data/full_data_v1.csv"
     )
 
     game_data_0_1_part1 = pd.read_csv(
-        "D:/Projekte/spielvorschlag/data/full_data_0_1_part1.csv",sep=";"
+        "./data/full_data_0_1_part1.csv",sep=";"
     )
     game_data_0_1_part2 = pd.read_csv(
-        "D:/Projekte/spielvorschlag/data/full_data_0_1_part2.csv", sep=";"
+        "./data/full_data_0_1_part2.csv", sep=";"
     )
 
     image_and_description_data = pd.read_csv(
-        "D:/Projekte/spielvorschlag/data/image_and_description_data.csv"
+        "./data/image_and_description_data.csv"
     )
 
     game_data_0_1 = pd.merge(
