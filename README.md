@@ -18,6 +18,8 @@
 7. [Update 24.11.2025](#-update-24112025)
 8. [Update 26.11.2025](#-update-26112025)
 9. [Update 28.11.2025](#-update-28112025)
+10. [Update 09.01.2026](#-update-09012026)
+
 ---
 
 ## Warum das Projekt?
@@ -341,5 +343,29 @@ Das Projekt ist nun **vorzeigbar**.
 - Machine Learning testen – auch wenn die ursprüngliche Idee vorerst verworfen wurde, möchte ich es dennoch ausprobieren.  
 - Datenaktualisierung und Profilintegration verbessern, sodass auch Spiele außerhalb der aktuellen Steam-IDs berücksichtigt werden können.  
 - Nach alternativen Lösungen suchen, um die App für den Nutzer einfacher und komfortabler zu machen.
+
+## 📆 Update 09.01.2026
+
+Die App hat jetzt ein neues Layout bekommen. Inzwischen sind es mehrere Seiten, statt eine einzige. Dadurch ist alles viel kompakter und Übersichtlicher. Beim Start der Seite werden jetzt per Funktion die Daten in den Cache geladen.
+Wenn der User seine Daten hochlädt werden diese Ebenfalls in den Cache geladen. Dadurch kann bequem durch die Seiten geklickt werden, ohne dass Informationen verloren gehen. 
+Insgesamt ist die App nun viel schneller und angenehmer zu nutzen
+
+Ein Nutzungsinfo ist ebenfalls implementiert und ist die Startseite der App.
+
+Machine Learning selbstn konnte nicht implementiert werden. Es lohnt sich einfach überhaupt nicht, denn ich habe keine Profildaten - außer meine eigenen:
+
+- Natürlich könnte man hier eigene Profile ersetllen und dann einen ähnlichen algorithmus anwenden wie Netflix oder Spotify es tun, aber die Daten wären nicht für reelle Szenarien anwendbar und somit nicht nutzbar.
+- Supervised Learning funktioniert sowieso schon nicht und unsupervised Learning aufgrund der fehlenden Profilinformationen auch nicht.
+- Ebenfalls habe ich überlegt vielleicht über die Cover der Spiele ein CNN zu starten, lohnt aber auch nicht, denn das Cover muss nicht unbedingt das Gameplay widerspiegeln
+
+Fazit: Machine Learning lohnt nicht. Zumindest nicht traditionelles lernen.
+
+
+Ich habe den Main Code und die Funktionen angepasst. Sie sollten nun leserlicher sein und deutlich mehr Kommentare umfassen. Gleichzeitig habe ich einige Bugs gefixt.
+Für die Datenbeschaffung Skripte ist die für Ende Januar ebenfalls geplant. 
+Kontakt mit Steam habe ich nicht aufgenommen. Stattdessen habe ich vorgestern nochmal die steamids per api abgefragt. Inzwischen sind es rund 150 Tausend Spiele. Ende Januar werde ich diesbezüglich alle Daten nochmals aktualisieren.
+
+
+
 
 
